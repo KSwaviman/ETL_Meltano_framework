@@ -1,0 +1,182 @@
+Metadata-Version: 2.1
+Name: meltano
+Version: 3.4.2
+Summary: Meltano is your CLI for ELT+: Open Source, Flexible, and Scalable. Move, transform, and test your data with confidence using a streamlined data engineering workflow you’ll love.
+Home-page: https://meltano.com
+License: MIT
+Keywords: Meltano,ELT,Data integration,singer-io,dbt
+Author: Meltano
+Author-email: hello@meltano.com
+Requires-Python: >=3.8,<3.13
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.12
+Provides-Extra: azure
+Provides-Extra: gcs
+Provides-Extra: mssql
+Provides-Extra: postgres
+Provides-Extra: psycopg2
+Provides-Extra: s3
+Provides-Extra: uv
+Requires-Dist: aiodocker (>=0.21.0,<0.22.0)
+Requires-Dist: alembic (>=1.13.1,<2.0.0)
+Requires-Dist: atomicwrites (>=1.2.1,<2.0.0)
+Requires-Dist: azure-common (>=1.1.28,<2.0.0) ; extra == "azure"
+Requires-Dist: azure-core (>=1.30.1,<2.0.0) ; extra == "azure"
+Requires-Dist: azure-identity (>=1.16.0,<2.0.0) ; extra == "azure"
+Requires-Dist: azure-storage-blob (>=12.20.0,<13.0.0) ; extra == "azure"
+Requires-Dist: boto3 (>=1.34.103,<2.0.0) ; extra == "s3"
+Requires-Dist: check-jsonschema (>=0.28.3,<0.29.0)
+Requires-Dist: click (>=8.1,<9.0)
+Requires-Dist: click-default-group (>=1.2.4,<2.0.0)
+Requires-Dist: click-didyoumean (>=0.3.1,<0.4.0)
+Requires-Dist: croniter (>=2.0.5,<3.0.0)
+Requires-Dist: fasteners (>=0.19,<0.20)
+Requires-Dist: flatten-dict (>=0,<1)
+Requires-Dist: google-cloud-storage (>=1.31.0) ; extra == "gcs"
+Requires-Dist: importlib-resources (>=6.4.0,<7.0.0)
+Requires-Dist: jinja2 (>=3.1.4,<4.0.0)
+Requires-Dist: jsonschema (>=4.22,<5.0)
+Requires-Dist: packaging (>=24.0,<25.0)
+Requires-Dist: platformdirs (>=4.2.1,<5.0.0)
+Requires-Dist: psutil (>=5.9.8,<6.0.0)
+Requires-Dist: psycopg2-binary (>=2.9.9,<3.0.0) ; extra == "psycopg2"
+Requires-Dist: psycopg[binary] (>=3.1.19,<4.0.0) ; extra == "postgres"
+Requires-Dist: pyjwt (>=2.6.0,<3.0.0)
+Requires-Dist: pymssql (>=2.3.0,<3.0.0) ; extra == "mssql"
+Requires-Dist: python-dateutil (>=2.9.0,<3.0.0)
+Requires-Dist: python-dotenv (>=1.0.1,<2.0.0)
+Requires-Dist: python-slugify (>=8.0.4,<9.0.0)
+Requires-Dist: python-ulid (>=1.1.0,<2.0.0)
+Requires-Dist: pyyaml (>=6.0.1,<7.0.0)
+Requires-Dist: questionary (>=2.0.1,<3.0.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Requires-Dist: rich (>=13.7.1,<14.0.0)
+Requires-Dist: ruamel.yaml (>=0.18.6,<0.19.0)
+Requires-Dist: setuptools (>=69.5.1,<70.0.0) ; python_version >= "3.12"
+Requires-Dist: smart-open (>=7.0.4,<8.0.0)
+Requires-Dist: snowplow-tracker (>=1.0.2,<2.0.0)
+Requires-Dist: sqlalchemy (>=2.0.30,<3.0.0)
+Requires-Dist: structlog (>=24.1.0,<25.0.0)
+Requires-Dist: tabulate (>=0.9.0,<0.10.0)
+Requires-Dist: typing-extensions (>=4.11.0,<5.0.0)
+Requires-Dist: tzlocal (>=5.2,<6.0)
+Requires-Dist: urllib3 (<2)
+Requires-Dist: uv (>=0.1.24,<0.2) ; extra == "uv"
+Requires-Dist: virtualenv (>=20.26.1,<21.0.0)
+Requires-Dist: yaspin (>=2.3.0,<3.0.0)
+Project-URL: Changelog, https://github.com/meltano/meltano/blob/main/CHANGELOG.md
+Project-URL: Documentation, https://docs.meltano.com
+Project-URL: Issue Tracker, https://github.com/meltano/meltano/issues
+Project-URL: Repository, https://github.com/meltano/meltano
+Project-URL: Slack, https://meltano.com/slack
+Project-URL: Twitter, https://twitter.com/meltanodata/
+Project-URL: Youtube, https://www.youtube.com/meltano
+Description-Content-Type: text/markdown
+
+<div align="center">
+  <picture align="center" with="600">
+    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/meltano/meltano/assets/5394188/59d36ec9-2e02-45ff-98ea-8b5b1f0fb34f">
+    <source media="(prefers-color-scheme: light)" srcset="https://github.com/meltano/meltano/assets/5394188/be586327-53b0-43e6-a93e-c7cc2577d9be">
+  <img alt="Meltano Logo" src="https://github.com/meltano/meltano/assets/5394188/be586327-53b0-43e6-a93e-c7cc2577d9be" width="600"/>
+  </picture>
+</div>
+
+<h1 align="center">The declarative code-first data integration engine</h1>
+<h3 align="center">Say goodbye to writing, maintaining, and scaling your own API integrations.<br>Unlock 600+ APIs and DBs and realize your wildest data and ML-powered product ideas.</h3>
+
+<div align="center">
+<a href="https://meltano.com/demo">
+<img alt="Try codespaces" src="https://img.shields.io/static/v1?label=&message=Try live demo with Codespaces&color=02a5a5&style=for-the-badge&logo=github"/>
+</a>
+</div>
+
+---
+
+<div align="center">
+<a href="https://docs.meltano.com/">
+<img alt="Docs" src="https://img.shields.io/website?down_color=red&down_message=offline&label=Docs&up_color=blue&up_message=online&url=https%3A%2F%2Fdocs.meltano.com%2F"/>
+</a>
+<a href="https://github.com/meltano/meltano/actions/workflows/test.yml?query=branch%3Amain">
+<img alt="Tests" src="https://github.com/meltano/meltano/actions/workflows/test.yml/badge.svg"/>
+</a>
+<a href="https://codecov.io/github/meltano/meltano">
+<img alt="Codecov" src="https://codecov.io/gh/meltano/meltano/branch/main/graph/badge.svg"/>
+</a>
+<a href="https://libraries.io/pypi/meltano/sourcerank">
+<img alt="Libraries.io SourceRank" src="https://img.shields.io/librariesio/sourcerank/pypi/meltano?label=SourceRank"/>
+</a>
+<a href="https://libraries.io/pypi/meltano">
+<img alt="Libraries.io dependency status for latest release" src="https://img.shields.io/librariesio/release/pypi/meltano?label=Dependencies"/>
+</a>
+</div>
+
+<div align="center">
+<a href="https://github.com/meltano/meltano/graphs/contributors">
+<img alt="GitHub contributors" src="https://img.shields.io/github/contributors/meltano/meltano?label=Contributors"/>
+</a>
+<a href="https://github.com/meltano/meltano/blob/main/LICENSE">
+<img alt="GitHub" src="https://img.shields.io/github/license/meltano/meltano?color=blue&label=License"/>
+</a>
+<a href="https://pypi.org/project/meltano/">
+<img alt="Meltano Python Package Version" src="https://img.shields.io/pypi/v/meltano?label=Version"/>
+</a>
+<a href="https://pypi.org/project/meltano/">
+<img alt="Supported Python Versions" src="https://img.shields.io/pypi/pyversions/meltano?label=Python"/>
+</a>
+<a href="https://pypi.org/project/meltano/">
+<img alt="Monthly PyPI Downloads" src="https://img.shields.io/pypi/dm/meltano?label=PyPI%20Downloads"/>
+</a>
+<a href="https://hub.docker.com/r/meltano/meltano">
+<img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/meltano/meltano?label=Docker%20Pulls"/>
+</a>
+</div>
+
+Integrations
+------------
+
+[Meltano Hub](https://hub.meltano.com/) is the single source of truth to find any Meltano plugins as well as [Singer](https://singer.io/) taps and targets. Users are also able to add more plugins to the Hub and have them immediately discoverable and usable within Meltano. The Hub is lovingly curated by Meltano and the wider Meltano community.
+
+Installation
+------------
+
+If you're ready to build your ideal data platform and start running data workflows across multiple tools, start by following the [Installation guide](https://docs.meltano.com/getting-started/installation) to have Meltano up and running in your device.
+
+Documentation
+-------------
+
+Check out the ["Getting Started" guide](https://docs.meltano.com/getting-started) or find the full documentation at [https://docs.meltano.com](https://docs.meltano.com/).
+
+Contributing
+------------
+
+Meltano is a truly open-source project, built for and by its community. We happily welcome and encourage your contributions. Start by browsing through our [issue tracker](https://github.com/meltano/meltano/issues?q=is%3Aopen+is%3Aissue) to add your ideas to the roadmap. If you're still unsure on what to contribute at the moment, you can always check out the list of open issues labeled as "[Accepting Merge Requests](https://github.com/meltano/meltano/issues?q=is%3Aopen+is%3Aissue+label%3A%22accepting+merge+requests%22)".
+
+For more information on how to contribute to Meltano, refer to our [contribution guidelines](https://docs.meltano.com/contribute/).
+
+Community
+---------
+
+We host weekly online events where you can engage with us directly. Check out more information in our [Community](https://meltano.com/community/) page.
+
+If you have any questions, want sneak peeks of features or would just like to say hello and network, join our community of over +2,500 data professionals!
+
+👋 [Join us on Slack!](https://meltano.com/slack)
+
+Responsible Disclosure Policy
+-----------------------------
+
+Please refer to the [responsible disclosure policy](https://docs.meltano.com/the-project/responsible-disclosure) on our website.
+
+License
+-------
+
+This code is distributed under the MIT license, see the [LICENSE](https://github.com/meltano/meltano/blob/main/LICENSE) file.
+

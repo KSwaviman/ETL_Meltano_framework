@@ -1,0 +1,4 @@
+meltano
+pandas
+fastapi
+uvicorn
