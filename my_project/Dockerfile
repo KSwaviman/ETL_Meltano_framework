@@ -16,7 +16,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Install Meltano
 RUN pip install meltano
 
-# Initialize Meltano project (assuming meltano.yml is in /app)
+# Initialize Meltano project ( meltano.yml is in /app)
 RUN meltano install
 
 # Install the specific tap and target
