@@ -23,6 +23,7 @@ This project demonstrates an end-to-end ETL (Extract, Transform, Load) pipeline 
     - [Transform](#transform)
     - [Load](#load)
   - [API](#api)
+  - [Execution Script](#execution-script)
   - [Docker](#docker)
     - [Build Docker Image](#build-docker-image)
     - [Push to Docker Hub](#push-to-docker-hub)
@@ -130,6 +131,14 @@ The transformed data is saved into a CSV file (`transformed_data.csv`).
 ## API
 
 Create an API using FastAPI to serve the transformed data. The API reads the transformed CSV file and returns the data in JSON format.
+
+## Execution Script
+To streamline the execution of the entire ETL pipeline and the FastAPI application, a `run_etl.sh` script is created. This script performs the following steps:
+
+1. Create the loaded_data directory if it doesn't exist.
+2. Run the Meltano ETL pipeline to extract and load the data.
+3. Transform the data using the transformation script.
+4. Start the FastAPI application to serve the data.
 
 ## Docker
 
