@@ -26,6 +26,7 @@ This project demonstrates an end-to-end ETL (Extract, Transform, Load) pipeline 
   - [Docker](#docker)
     - [Build Docker Image](#build-docker-image)
     - [Push to Docker Hub](#push-to-docker-hub)
+    - [Pull Docker Container](#pull-docker-container)
     - [Run Docker Container](#run-docker-container)
 
 ## Setup
@@ -161,6 +162,13 @@ Create an API using FastAPI to serve the transformed data. The API reads the tra
     ```sh
     docker push swaviman/meltano_etl_project:latest
     ```
+
+### Pull Docker Container
+
+To pull the docker image from Docker Hub
+```sh
+docker pull swaviman/meltano_etl_project:latest
+```
 
 ### Run Docker Container
 
