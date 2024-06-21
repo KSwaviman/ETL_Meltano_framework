@@ -6,7 +6,9 @@
 
 ## Overview
 
-This project demonstrates an end-to-end ETL (Extract, Transform, Load) pipeline that extracts data from an API (I used [DummyJSON.com/](https://dummyjson.com/products)), transforms the data, and exposes it through a FastAPI endpoint. The entire solution is containerized using Docker for easy deployment.
+This project demonstrates an end-to-end ETL (Extract, Transform, Load) pipeline that extracts data from an API (I used [DummyJSON.com/products](https://dummyjson.com/products)), transforms the data, and exposes it through a FastAPI endpoint. The entire solution is containerized using Docker for easy deployment.
+
+If you intend to run the final solution, skip to the last two steps in the Table of Contents & follow the steps for "Pull Docker Container" & "Run Docker Container".
 
 ## Table of Contents
 
@@ -174,7 +176,7 @@ To streamline the execution of the entire ETL pipeline and the FastAPI applicati
 
 ### Pull Docker Container
 
-To pull the docker image from Docker Hub
+Make sure Docker Desktop is up and running. To pull the docker image from Docker Hub, run in the terminal:
 ```sh
 docker pull swaviman/meltano_etl_project:latest
 ```
@@ -186,4 +188,6 @@ To run the Docker container:
 ```sh
 docker run -p 8000:8000 swaviman/meltano_etl_project:latest
 ```
+
+Visit http://127.0.0.1:8000/data in a browser window to view the result.
 
