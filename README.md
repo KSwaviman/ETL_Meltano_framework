@@ -191,3 +191,12 @@ docker run -p 8000:8000 swaviman/meltano_etl_project:latest
 
 Visit http://127.0.0.1:8000/data in a browser window to view the result.
 
+
+
+As part of possible future enhancement to this project a few things can be done.
+
+1. Storing extracted files in file system is not ideal and scalable, hence a structured database can be used.
+2. Postgres or SQL Server can be used.
+3. Postgres is supported by dbt. For meltano dbt transformations postgres is ideal.
+4. The DB and the ETL module can be put in separate docket containers using docker compose.
+5. Unit tests must be written into the project.
